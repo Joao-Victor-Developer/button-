@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Modo Escuro - Sheldon Style</title>
+
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    #toggle-dark-mode {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background-color: black;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    body.dark-mode #toggle-dark-mode {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- O glorioso botão circular -->
+  <button id="toggle-dark-mode" title="Alternar modo escuro"></button>
+
+  <script>
+    const botao = document.getElementById('toggle-dark-mode');
+
+    botao.addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
